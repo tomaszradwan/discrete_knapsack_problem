@@ -1,5 +1,7 @@
 **The script solves the knapsack problem.**
 
+**Algorithm Approximate**
+
 https://pl.wikipedia.org/wiki/Problem_plecakowy
 
 After downloading the package with the files, open the terminal and go to the folder.

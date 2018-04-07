@@ -7,7 +7,7 @@
  */
 
 function __autoload($class_name) {
-    include $class_name . '.php';
+    require $class_name . '.php';
 }
 
 $params = ValidatorArgv::validateArgv($argv);

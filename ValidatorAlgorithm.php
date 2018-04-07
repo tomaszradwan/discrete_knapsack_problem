@@ -25,7 +25,7 @@ class ValidatorAlgorithm
         } else {
             $number = null;
         }
+
         return $number;
     }
 }
-
