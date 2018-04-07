@@ -1,4 +1,5 @@
 **The script solves the knapsack problem.**
+
 https://pl.wikipedia.org/wiki/Problem_plecakowy
 
 After downloading the package with the files, open the terminal and go to the folder.
@@ -17,4 +18,4 @@ Parameters description:
 
 `<backpack_weight>` - required parameter, type: float
 
-`<number_of_algorithm>` - optional parameter, type: integer, default value: 1
+`<number_of_algorithm>` - optional parameter, type: integer, default value: 1 = Algorithm Approximate
