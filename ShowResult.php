@@ -30,6 +30,6 @@ class ShowResult
 
         return "Total value of selected items: " . $amount
             . " | Total weight of selected items: " . $weight
-            . " | List of selected items: " . implode(", ", $id);
+            . " | List(ID number) of selected items: " . implode(", ", $id);
     }
 }
