@@ -10,9 +10,6 @@ function __autoload($class_name) {
     include $class_name . '.php';
 }
 
-//var_dump($argc);
-//var_dump($argv);
-
 $params = ValidatorArgv::validateArgv($argv);
 
 $relativePath = ValidatorPath::validatePath($params[0]);
@@ -21,15 +18,15 @@ $algorithmNr = ValidatorAlgorithm::validateAlgorithmNumber($params[2]);
 
 try {
     if ($relativePath === null) {
-        throw new Exception('Nie podałeś relatywnej ścieżka lub plik(.csv) nie istnieje(ex.: ./file_name.csv lub .\file_name.csv)');
+        throw new Exception('You did not specify a relative path (e.g: "./file_name.csv" or ".\ file_name.csv") or the file (file_name.csv) does not exist.');
     }
 
     if ($backpackSize === null) {
-        throw new Exception('Rozmiar plecaka jest wymagany, typ: float.');
+        throw new Exception('Backpack size is required, type: float.');
     }
 
     if ($algorithmNr === null) {
-        throw new Exception('Algorytm dla obliczeń jest typu integer.');
+        throw new Exception('The algorithm for calculations is of the integer type.');
     }
 }
 catch (Exception $e) {
@@ -38,4 +35,6 @@ catch (Exception $e) {
 }
 
 $file = UploadFile::uploadToArray($relativePath);
-//var_dump($file);
+
+echo ShowResult::show(SelectAglorithm::select($algorithmNr, $backpackSize, $file));
+

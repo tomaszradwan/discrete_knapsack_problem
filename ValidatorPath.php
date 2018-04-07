@@ -12,7 +12,7 @@ class ValidatorPath
      * @param string $path
      * @return null|string
      */
-    static public function validatePath(string $path)
+    static public function validatePath($path)
     {
         $regWin = '/^\.\\\\.*\.(csv)$/';
         $regLin = '/^\.\/.*\.(csv)$/';
