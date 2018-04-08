@@ -14,7 +14,7 @@ $params = ValidatorArgv::validateArgv($argv);
 
 $relativePath = ValidatorPath::validatePath($params[0]);
 $backpackSize = ValidatorBackpack::validateBackpackSize($params[1]);
-$algorithmNr = ValidatorAlgorithm::validateAlgorithmNumber($params[2]);
+$algorithmId = ValidatorAlgorithm::validateAlgorithmNumber($params[2]);
 
 try {
     if ($relativePath === null) {
@@ -25,7 +25,7 @@ try {
         throw new Exception('Backpack size is required, type: float.');
     }
 
-    if ($algorithmNr === null) {
+    if ($algorithmId === null) {
         throw new Exception('The algorithm for calculations is of the integer type.');
     }
 }
@@ -36,5 +36,5 @@ catch (Exception $e) {
 
 $file = UploadFile::uploadToArray($relativePath);
 
-echo ShowResult::show(SelectAglorithm::select($algorithmNr, $backpackSize, $file));
+echo ShowResult::show(SelectAglorithm::select($algorithmId, $backpackSize, $file));
 
