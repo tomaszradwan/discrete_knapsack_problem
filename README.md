@@ -2,6 +2,8 @@
 
 https://pl.wikipedia.org/wiki/Problem_plecakowy
 
+=========================================
+
 After downloading the package with the files, open the terminal and go to the folder.
 
 The script is launched after entering the command:
@@ -28,12 +30,15 @@ You can implement new algorithms, follow the steps below.
 1. In folder "Algorithms" add class with the new algorithm.
 
 2. Open file "SelectAglorithm.php" and:
+
     a) add require './Algorithms/file_name_with_new_algoritm.php';
-    b) add new case in switch
-3. Open file README.md add the name of new algorithm to section "List of Algorithms"
+    
+    b) add new case in switch with the implementation of a new class of algorithm
+    
+3. Open file README.md add ID number(from switch) and the name of new algorithm to section "List of Algorithms"
 
 =========================================
 
 __**List of Algorithms**__
 
-_**1. Algorithm Approximate**_
+_**1 => Algorithm Approximate**_
