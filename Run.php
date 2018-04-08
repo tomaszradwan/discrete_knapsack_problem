@@ -25,7 +25,6 @@ class Run
      */
     public function run(array $argv)
     {
-
         $params = ValidatorArgv::validateArgv($argv);
 
         $relativePath = ValidatorPath::validatePath($params[0]);
