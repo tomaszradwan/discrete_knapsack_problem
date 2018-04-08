@@ -33,9 +33,9 @@ You can implement new algorithms, follow the steps below.
 
     a) add require './Algorithms/file_name_with_new_algoritm.php';
     
-    b) add new case in switch with the implementation of a new class of algorithm
+    b) add new case in switch and the implementation of a new class of algorithm
     
-3. Open file README.md add ID number(from switch) and the name of new algorithm to section "List of Algorithms"
+3. Open file "README.md" add ID number(from switch) and the name of new algorithm to section "List of Algorithms"
 
 =========================================
 
