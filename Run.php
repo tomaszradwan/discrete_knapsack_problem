@@ -11,10 +11,8 @@ function __autoload($class_name) {
     require $class_name . '.php';
 }
 
-
 class Run
 {
-
     /**
      * Run constructor.
      */
@@ -48,8 +46,7 @@ class Run
             }
         }
         catch (Exception $e) {
-            echo $e->getMessage();
-            die();
+            die($e->getMessage());
         }
 
         $file = UploadFile::uploadToArray($relativePath);

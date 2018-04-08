@@ -8,10 +8,10 @@ After downloading the package with the files, open the terminal and go to the fo
 
 The script is launched after entering the command:
 
-_php RunScript.php `<relative path_to_csv_file>` `<backpack_weight>` optional `<number_of_algorithm>`_
+_php ExecuteCalculation.php `<relative path_to_csv_file>` `<backpack_weight>` optional `<number_of_algorithm>`_
 
 e.g.
-_php RunScript.php ./file_with_data.csv 115.5 1_
+_php ExecuteCalculation.php ./file_with_data.csv 115.5 1_
 
 =========================================
 
