@@ -5,6 +5,7 @@
  * Date: 2018-04-06
  * Time: 22:36
  */
+declare(strict_types=1);
 
 /**
  * Class AlgorithmApproximate
@@ -22,6 +23,11 @@ class AlgorithmApproximate
      */
     private $backpackSize = 0;
 
+    /**
+     * AlgorithmApproximate constructor.
+     * @param float $backpackSize
+     * @param array $file
+     */
     function __construct(float $backpackSize, array $file)
     {
         $this->backpackSize = $backpackSize;

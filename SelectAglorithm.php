@@ -5,11 +5,19 @@
  * Date: 2018-04-07
  * Time: 07:37
  */
+declare(strict_types=1);
 
 require './Algorithms/AlgorithmApproximate.php';
 
 class SelectAglorithm
 {
+    /**
+     * SelectAglorithm constructor.
+     */
+    function __construct()
+    {
+    }
+
     /**
      * @param int $algorithmNr
      * @param float $backpackSize

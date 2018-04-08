@@ -5,9 +5,17 @@
  * Date: 2018-04-05
  * Time: 21:44
  */
+declare(strict_types=1);
 
 class ValidatorPath
 {
+    /**
+     * ValidatorPath constructor.
+     */
+    function __construct()
+    {
+    }
+
     /**
      * @param string $path
      * @return null|string

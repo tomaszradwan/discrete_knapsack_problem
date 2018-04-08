@@ -5,9 +5,17 @@
  * Date: 2018-04-07
  * Time: 10:05
  */
+declare(strict_types=1);
 
 class ShowResult
 {
+    /**
+     * ShowResult constructor.
+     */
+    function __construct()
+    {
+    }
+
     /**
      * @param array $array
      * @return string
@@ -30,6 +38,6 @@ class ShowResult
 
         return "Total value of selected items: " . $amount
             . " | Total weight of selected items: " . $weight
-            . " | List(ID number) of selected items: " . implode(", ", $id);
+            . " | List(ID numbers) of selected items: " . implode(", ", $id);
     }
 }

@@ -5,10 +5,17 @@
  * Date: 2018-04-05
  * Time: 20:35
  */
-
+declare(strict_types=1);
 
 class ValidatorBackpack
 {
+    /**
+     * ValidatorBackpack constructor.
+     */
+    function __construct()
+    {
+    }
+
     /**
      * @param $backpackSize
      * @return float|null

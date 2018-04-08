@@ -5,9 +5,17 @@
  * Date: 2018-04-05
  * Time: 22:42
  */
+declare(strict_types=1);
 
 class UploadFile
 {
+    /**
+     * UploadFile constructor.
+     */
+    function __construct()
+    {
+    }
+
     /**
      * @param string $pathToFile
      * @return array
