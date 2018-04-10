@@ -26,15 +26,14 @@ class AlgorithmApproximate
     /**
      * AlgorithmApproximate constructor.
      * @param float $backpackSize
-     * @param array $file
      */
-    function __construct(float $backpackSize, array $file)
+    function __construct(float $backpackSize)
     {
         $this->backpackSize = $backpackSize;
     }
 
     /**
-     * @param $array
+     * @param array $array
      * @return array
      */
     public function algorithmApproximate(array $array):array

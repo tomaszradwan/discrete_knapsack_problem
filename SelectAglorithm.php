@@ -24,14 +24,14 @@ class SelectAglorithm
      * @param array $file
      * @return array
      */
-    static public function select(int $algorithmNr, float $backpackSize, array $file): array
+    static public function select(int $algorithmNr, float $backpackSize, array $file):array
     {
         $result = array();
 
         try {
             switch ($algorithmNr) {
                 case 1:
-                    $algAApproximate = new AlgorithmApproximate($backpackSize, $file);
+                    $algAApproximate = new AlgorithmApproximate($backpackSize);
                     $result = $algAApproximate->algorithmApproximate($file);
                     break;
                 default:
