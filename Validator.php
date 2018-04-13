@@ -13,7 +13,6 @@ spl_autoload_register('autoloaderValidatorsFolder');
 
 class Validator
 {
-
     /**
      * Validator constructor.
      */

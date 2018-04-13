@@ -49,7 +49,7 @@ class Help
     {
         return
             [
-                1 => 'AlgorithmApproximate',
+                1 => 'Algorithm Approximate',
             ];
     }
 }
