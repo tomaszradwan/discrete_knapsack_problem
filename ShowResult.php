@@ -30,7 +30,7 @@ class ShowResult
         if (is_array($array) && count($array) > 0) {
             foreach ($array as $key => $val) {
                 $id[] = $key;
-                $amount +=$val[2];
+                $amount += $val[2];
                 $weight += $val[1];
             }
         } else {

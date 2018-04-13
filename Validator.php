@@ -19,12 +19,14 @@ class Validator
      */
     public function __construct()
     {
-
     }
 
-    static public function validateAll(array $argv)
+    /**
+     * @param array $argv
+     * @return array
+     */
+    static public function validateAll(array $argv):array
     {
-
         $params = ValidatorArgv::validateArgv($argv);
 
         $relativePath = ValidatorPath::validatePath($params[0]);
