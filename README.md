@@ -37,8 +37,10 @@ You can implement new algorithms, follow the steps below.
     
 3. Open file "README.md" add ID number(from switch) and the name of new algorithm to section "List of Algorithms"
 
+4. Open file "Help.php" add ID number(from switch) and the name of new algorithm to method "arrayWithAlgorithmNames()"
+
 =========================================
 
-__**List of Algorithms**__
+__**The List of Algorithms**__
 
 _**1 => Algorithm Approximate**_

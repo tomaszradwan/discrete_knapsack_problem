@@ -23,6 +23,17 @@ class ValidatorArgv
      */
     static public function validateArgv(array $argv):array
     {
+        try {
+            if (count($argv) == 1) {
+                throw new Exception("You have not entered any parameters.");
+            }
+        }
+        catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+        new Help($argv);
+
         $arr = array();
 
         $arr[] = $argv[1] ?? null;

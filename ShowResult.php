@@ -37,8 +37,8 @@ class ShowResult
             die("There are no results for the entered data.");
         }
 
-        return "Total value of selected items: " . $amount
-            . " | Total weight of selected items: " . $weight
-            . " | List(ID numbers) of selected items: " . implode(", ", $id);
+        return "Total value of selected items: " . $amount . PHP_EOL
+            . "Total weight of selected items: " . $weight . PHP_EOL
+            . "List(ID numbers) of selected items: " . implode(", ", $id);
     }
 }
