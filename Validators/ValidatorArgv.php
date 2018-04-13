@@ -5,6 +5,7 @@
  * Date: 2018-04-05
  * Time: 21:26
  */
+
 declare(strict_types=1);
 
 class ValidatorArgv

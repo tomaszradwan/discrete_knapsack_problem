@@ -5,6 +5,7 @@
  * Date: 2018-04-06
  * Time: 22:36
  */
+
 declare(strict_types=1);
 
 /**

@@ -5,11 +5,11 @@
  * Date: 2018-04-08
  * Time: 21:01
  */
+
 declare(strict_types=1);
 
-function __autoload($class_name) {
-    require $class_name . '.php';
-}
+require_once 'autoload.php';
+spl_autoload_register('autoloaderCurrentFolder');
 
 class Run
 {
@@ -25,31 +25,10 @@ class Run
      */
     public function run(array $argv)
     {
-        $params = ValidatorArgv::validateArgv($argv);
+        $params = Validator::validateAll($argv);
 
-        $relativePath = ValidatorPath::validatePath($params[0]);
-        $backpackSize = ValidatorBackpack::validateBackpackSize($params[1]);
-        $algorithmId = ValidatorAlgorithm::validateAlgorithmNumber($params[2]);
+        $file = UploadFile::uploadToArray($params[0]);
 
-        try {
-            if ($relativePath === null) {
-                throw new Exception('You did not specify a relative path (e.g: "./file_name.csv" or ".\ file_name.csv") or the file (file_name.csv) does not exist.');
-            }
-
-            if ($backpackSize === null) {
-                throw new Exception('Backpack size is required, type: float.');
-            }
-
-            if ($algorithmId === null) {
-                throw new Exception('The algorithm for calculations is of the integer type.');
-            }
-        }
-        catch (Exception $e) {
-            die($e->getMessage());
-        }
-
-        $file = UploadFile::uploadToArray($relativePath);
-
-        echo ShowResult::show(SelectAglorithm::select($algorithmId, $backpackSize, $file));
+        echo ShowResult::show(SelectAglorithm::select($params[2], $params[1], $file));
     }
 }

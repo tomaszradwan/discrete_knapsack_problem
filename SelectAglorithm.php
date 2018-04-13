@@ -5,9 +5,11 @@
  * Date: 2018-04-07
  * Time: 07:37
  */
+
 declare(strict_types=1);
 
-require './Algorithms/AlgorithmApproximate.php';
+require_once 'autoload.php';
+spl_autoload_register('autoloaderAlgorithmsFolder');
 
 class SelectAglorithm
 {
@@ -39,8 +41,7 @@ class SelectAglorithm
                     break;
             }
         } catch (Exception $e) {
-            echo $e->getMessage();
-            die();
+            die($e->getMessage());
         }
 
         return $result;

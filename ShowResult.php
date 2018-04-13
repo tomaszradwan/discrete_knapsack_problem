@@ -5,6 +5,7 @@
  * Date: 2018-04-07
  * Time: 10:05
  */
+
 declare(strict_types=1);
 
 class ShowResult
