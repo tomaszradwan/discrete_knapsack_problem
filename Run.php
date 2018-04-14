@@ -27,8 +27,8 @@ class Run
     {
         $params = Validator::validateAll($argv);
 
-        $file = UploadFile::uploadToArray($params[0]);
+        $file = UploadFile::uploadToArray($params['relativePath']);
 
-        echo ShowResult::show(SelectAglorithm::select($params[2], $params[1], $file));
+        echo ShowResult::show(SelectAglorithm::select($params['algorithmId'], $params['backpackSize'], $file));
     }
 }

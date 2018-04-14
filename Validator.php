@@ -51,9 +51,9 @@ class Validator
 
         return
             [
-                $relativePath,
-                $backpackSize,
-                $algorithmId
+                'relativePath' => $relativePath,
+                'backpackSize'=> $backpackSize,
+                'algorithmId' => $algorithmId
             ];
     }
 }
