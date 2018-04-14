@@ -23,7 +23,7 @@ class ShowResult
      */
     static public function show(array $array):string
     {
-        $id = array();
+        $id = [];
         $amount = 0;
         $weight = 0;
 

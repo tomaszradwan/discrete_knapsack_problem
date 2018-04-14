@@ -24,7 +24,7 @@ class UploadFile
     static public function uploadToArray(string $pathToFile):array
     {
         $file = file($pathToFile);
-        $arr = array();
+        $arr = [];
 
         for ($i = 1; $i <= count($file) - 1; $i++) {
             $arr[] = explode(";", $file[$i]);

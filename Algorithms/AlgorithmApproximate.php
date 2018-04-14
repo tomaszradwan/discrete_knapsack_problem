@@ -39,8 +39,8 @@ class AlgorithmApproximate
      */
     public function algorithmApproximate(array $array):array
     {
-        $arr = array();
-        $backpack = array();
+        $arr = [];
+        $backpack = [];
 
         foreach ($array as $key => $val) {
             $arr[$val[0]][0] = ceil($val[2] / $val[1]);

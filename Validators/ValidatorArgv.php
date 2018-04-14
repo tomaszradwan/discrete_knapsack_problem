@@ -34,7 +34,7 @@ class ValidatorArgv
 
         new Help($argv);
 
-        $arr = array();
+        $arr = [];
 
         $arr[] = $argv[1] ?? null;
         $arr[] = $argv[2] ?? null;

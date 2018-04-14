@@ -28,7 +28,7 @@ class SelectAglorithm
      */
     static public function select(int $algorithmNr, float $backpackSize, array $file):array
     {
-        $result = array();
+        $result = [];
 
         try {
             switch ($algorithmNr) {
