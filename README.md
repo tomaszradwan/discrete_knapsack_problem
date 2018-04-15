@@ -15,6 +15,12 @@ _php ExecuteCalculation.php ./file_with_data.csv 115.5 1_
 
 =========================================
 
+To see the lists of available algorithms enter command below:
+
+php ExecuteCalculation.php --help
+
+=========================================
+
 Parameters description:
 
 `<relative_path_to_file_csv>` - required parameter, type: string, files with the extension .csv
