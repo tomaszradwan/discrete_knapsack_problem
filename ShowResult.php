@@ -30,11 +30,11 @@ class ShowResult
         if (is_array($array) && count($array) > 0) {
             foreach ($array as $key => $val) {
                 $id[] = $key;
-                $amount += $val[2];
-                $weight += $val[1];
+                $amount += $val["itemValue"];
+                $weight += $val["itemWeight"];
             }
         } else {
-            die("There are no results for the entered data.");
+            die("There is no results for the entered data.");
         }
 
         return "Total value of selected items: " . $amount . PHP_EOL

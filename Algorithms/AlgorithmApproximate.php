@@ -43,17 +43,17 @@ class AlgorithmApproximate
         $backpack = [];
 
         foreach ($array as $key => $val) {
-            $arr[$val[0]][0] = ceil($val[2] / $val[1]);
-            $arr[$val[0]][1] = $val[1];
-            $arr[$val[0]][2] = $val[2];
+            $arr[$val[0]]["unitValue"] = ceil($val[2] / $val[1]);
+            $arr[$val[0]]["itemWeight"] = $val[1];
+            $arr[$val[0]]["itemValue"] = $val[2];
         }
 
         arsort($arr);
 
         foreach ($arr as $key => $val) {
-            if ($val[1] + $this->currentWeight <= $this->backpackSize) {
+            if (($val["itemWeight"] + $this->currentWeight) <= $this->backpackSize) {
                 $backpack[$key] = $val;
-                $this->currentWeight += $val[1];
+                $this->currentWeight += $val["itemWeight"];
             }
         }
 
