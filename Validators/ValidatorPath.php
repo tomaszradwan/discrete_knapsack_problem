@@ -1,13 +1,15 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: tomasz
+ * Created by Tomasz Radwan
  * Date: 2018-04-05
  * Time: 21:44
  */
 
 declare(strict_types=1);
 
+/**
+ * Class ValidatorPath
+ */
 class ValidatorPath
 {
     /**
@@ -18,6 +20,8 @@ class ValidatorPath
     }
 
     /**
+     * Path validator.
+     *
      * @param string $path
      * @return null|string
      */
@@ -29,11 +33,9 @@ class ValidatorPath
         if (preg_match($regWin, $path) || preg_match($regLin, $path)) {
             if (file_exists($path)) {
                 return $path;
-            } else {
-                return null;
             }
-        } else {
-            return null;
         }
+
+        return null;
     }
 }

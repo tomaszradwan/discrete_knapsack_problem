@@ -1,7 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: tomasz
+ * Created by Tomasz Radwan
  * Date: 2018-04-06
  * Time: 22:36
  */
@@ -10,6 +9,7 @@ declare(strict_types=1);
 
 /**
  * Class AlgorithmApproximate
+ *
  * https://pl.wikipedia.org/wiki/Problem_plecakowy
  */
 class AlgorithmApproximate
@@ -17,15 +17,16 @@ class AlgorithmApproximate
     /**
      * @var int
      */
-    private $currentWeight = 0;
+    protected $currentWeight = 0;
 
     /**
      * @var float
      */
-    private $backpackSize = 0;
+    protected $backpackSize = 0;
 
     /**
      * AlgorithmApproximate constructor.
+     *
      * @param float $backpackSize
      */
     function __construct(float $backpackSize)
@@ -34,26 +35,28 @@ class AlgorithmApproximate
     }
 
     /**
+     * Calculation for approximate algorithm.
+     *
      * @param array $array
      * @return array
      */
-    public function algorithmApproximate(array $array):array
+    public function algorithmApproximate(array $array): array
     {
         $arr = [];
         $backpack = [];
 
         foreach ($array as $key => $val) {
-            $arr[$val[0]]["unitValue"] = ceil($val[2] / $val[1]);
-            $arr[$val[0]]["itemWeight"] = $val[1];
-            $arr[$val[0]]["itemValue"] = $val[2];
+            $arr[$val[0]]['unitValue'] = ceil($val[2] / $val[1]);
+            $arr[$val[0]]['itemWeight'] = $val[1];
+            $arr[$val[0]]['itemValue'] = $val[2];
         }
 
         arsort($arr);
 
         foreach ($arr as $key => $val) {
-            if (($val["itemWeight"] + $this->currentWeight) <= $this->backpackSize) {
+            if (($val['itemWeight'] + $this->currentWeight) <= $this->backpackSize) {
                 $backpack[$key] = $val;
-                $this->currentWeight += $val["itemWeight"];
+                $this->currentWeight += $val['itemWeight'];
             }
         }
 

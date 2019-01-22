@@ -1,7 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: tomasz
+ * Created by Tomasz Radwan
  * Date: 2018-04-08
  * Time: 21:05
  */

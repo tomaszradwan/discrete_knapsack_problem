@@ -1,13 +1,15 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: tomasz
+ * Created by Tomasz Radwan
  * Date: 2018-04-05
  * Time: 21:26
  */
 
 declare(strict_types=1);
 
+/**
+ * Class ValidatorArgv
+ */
 class ValidatorArgv
 {
     /**
@@ -18,17 +20,18 @@ class ValidatorArgv
     }
 
     /**
+     * Validate parameters.
+     *
      * @param array $argv
      * @return array
      */
-    static public function validateArgv(array $argv):array
+    static public function validateArgv(array $argv): array
     {
         try {
             if (count($argv) == 1) {
-                throw new Exception("You have not entered any parameters.");
+                throw new Exception('You have not entered any parameters.');
             }
-        }
-        catch (Exception $e) {
+        } catch (Exception $e) {
             die($e->getMessage());
         }
 

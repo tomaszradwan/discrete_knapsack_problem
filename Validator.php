@@ -1,7 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: tomasz
+ * Created by Tomasz Radwan
  * Date: 2018-04-13
  * Time: 17:53
  */
@@ -11,6 +10,9 @@ declare(strict_types=1);
 require_once 'autoload.php';
 spl_autoload_register('autoloaderValidatorsFolder');
 
+/**
+ * Class Validator
+ */
 class Validator
 {
     /**
@@ -21,10 +23,12 @@ class Validator
     }
 
     /**
+     * Validate input data.
+     *
      * @param array $argv
      * @return array
      */
-    static public function validateAll(array $argv):array
+    static public function validateAll(array $argv): array
     {
         $params = ValidatorArgv::validateArgv($argv);
 
@@ -34,7 +38,8 @@ class Validator
 
         try {
             if ($relativePath === null) {
-                throw new Exception('You did not specify a relative path (e.g: "./file_name.csv" or ".\ file_name.csv") or the file (file_name.csv) does not exist.');
+                throw new Exception('You did not specify a relative path (e.g: "./file_name.csv" or ".\ file_name.csv")
+                 or the file (file_name.csv) does not exist.');
             }
 
             if ($backpackSize === null) {
@@ -44,15 +49,14 @@ class Validator
             if ($algorithmId === null) {
                 throw new Exception('The algorithm for calculations is of the integer type.');
             }
-        }
-        catch (Exception $e) {
+        } catch (Exception $e) {
             die($e->getMessage());
         }
 
         return
             [
                 'relativePath' => $relativePath,
-                'backpackSize'=> $backpackSize,
+                'backpackSize' => $backpackSize,
                 'algorithmId' => $algorithmId
             ];
     }

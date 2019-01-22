@@ -1,7 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: tomasz
+ * Created by Tomasz Radwan
  * Date: 2018-04-07
  * Time: 07:37
  */
@@ -11,6 +10,9 @@ declare(strict_types=1);
 require_once 'autoload.php';
 spl_autoload_register('autoloaderAlgorithmsFolder');
 
+/**
+ * Class SelectAglorithm
+ */
 class SelectAglorithm
 {
     /**
@@ -21,12 +23,14 @@ class SelectAglorithm
     }
 
     /**
+     * Select algorithm.
+     *
      * @param int $algorithmNr
      * @param float $backpackSize
      * @param array $file
      * @return array
      */
-    static public function select(int $algorithmNr, float $backpackSize, array $file):array
+    static public function select(int $algorithmNr, float $backpackSize, array $file): array
     {
         $result = [];
 
@@ -37,7 +41,7 @@ class SelectAglorithm
                     $result = $algAApproximate->algorithmApproximate($file);
                     break;
                 default:
-                    throw new Exception("Algorithm does not exists.");
+                    throw new Exception('Algorithm does not exists.');
                     break;
             }
         } catch (Exception $e) {

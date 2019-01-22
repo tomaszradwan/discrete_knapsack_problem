@@ -11,6 +11,9 @@ declare(strict_types=1);
 require_once 'autoload.php';
 spl_autoload_register('autoloaderCurrentFolder');
 
+/**
+ * Class Run
+ */
 class Run
 {
     /**
@@ -21,14 +24,24 @@ class Run
     }
 
     /**
+     * Run script.
+     *
      * @param array $argv
      */
     public function run(array $argv)
     {
         $params = Validator::validateAll($argv);
 
-        $file = UploadFile::uploadToArray($params['relativePath']);
+        $file = UploadFile::uploadToArray(
+            $params['relativePath']
+        );
 
-        echo ShowResult::show(SelectAglorithm::select($params['algorithmId'], $params['backpackSize'], $file));
+        echo ShowResult::show(
+            SelectAglorithm::select(
+                $params['algorithmId'],
+                $params['backpackSize'],
+                $file
+            )
+        );
     }
 }

@@ -1,13 +1,15 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: tomasz
+ * Created by Tomasz Radwan
  * Date: 2018-04-05
  * Time: 20:44
  */
 
 declare(strict_types=1);
 
+/**
+ * Class ValidatorAlgorithm
+ */
 class ValidatorAlgorithm
 {
     /**
@@ -18,6 +20,8 @@ class ValidatorAlgorithm
     }
 
     /**
+     * Validation for algorithm number.
+     *
      * @param int $number
      * @return int|null
      */
@@ -28,8 +32,7 @@ class ValidatorAlgorithm
 
         if ($number == 1) {
             $number = 1;
-        }
-        else if (preg_match($reg, $number)) {
+        } elseif (preg_match($reg, $number)) {
             $number = intval($number);
         } else {
             $number = null;
